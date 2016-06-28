@@ -36,7 +36,7 @@ function git_check_branch {
     if [ "$(git status --porcelain)" == "" ]; then
       echo "${light_green}on $(b) ${blue}$(git_check_pull 2> /dev/null)${reset}"
     else
-      echo "${red}on $(b)* ${blue}$(git_check_pull 2> /dev/null)${reset}"
+      echo "${pale_green}on $(b)* ${blue}$(git_check_pull 2> /dev/null)${reset}"
     fi
   fi
   cleanup_colours
