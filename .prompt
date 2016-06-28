@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Prompt Compatible Colours
+ps_orange="\[$(tput setaf 166)\]"
+ps_yellow="\[$(tput setaf 11)\]"
+ps_pale_green="\[$(tput setaf 190)\]"
+ps_reset="\[$(tput sgr0)\]"
+
+# See .git-helper for function calls
+export PS1="${ps_pale_green}\w${ps_reset} \$(git_check_branch)\n$ "
+
+unset ps_orange
+unset ps_yellow
+unset ps_reset
+unset ps_pale_green

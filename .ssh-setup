@@ -1,0 +1,19 @@
+#!/bin/bash
+
+function remove_ssh {
+  colours
+  if [[ -z $1 ]]; then
+    echo "${amber_status} Usage - reset_ssh [url]"
+    cleanup_colours && return 1
+  fi
+
+  sed -i.backup '/'${1}'/d' ~/.ssh/known_hosts
+
+  if diff ~/.ssh/known_hosts ~/.ssh/known_hosts.backup > /dev/null; then
+    echo "${red_status} Nothing was removed from the known_hosts file!"
+    cleanup_colours && return 1
+  fi
+
+  echo "${green_status} Reset ${1} in known_hosts."
+  cleanup_colours
+}

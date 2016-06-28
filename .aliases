@@ -1,0 +1,18 @@
+#!/bin/bash
+
+## General
+alias l='ls -lta'
+alias c='cd ~/Code'
+alias ports='lsof -i'
+
+function pid {
+  directory=$(basename $(pwd))
+  ps -ef | grep Java | grep ${directory} | awk '{print $2}'
+}
+
+function kpid {
+  kill $(pid)
+}
+
+## Code
+alias gosrc='cd ${GOPATH}/src/github.com/peteclark-io'
