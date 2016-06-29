@@ -7,3 +7,4 @@
 . ~/dotfiles/.ls
 . ~/dotfiles/.git-helper
 . ~/dotfiles/.prompt
+. ~/dotfiles/.encryption
