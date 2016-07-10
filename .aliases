@@ -7,6 +7,7 @@ alias ports='lsof -i'
 alias fin='ledger -f ~/finances/secret/ledger.dat'
 alias finb='ledger -f ~/finances/secret/ledger.dat -f ~/finances/secret/budgets.dat'
 alias payday='~/dotfiles/payday' # todo: install payday somewhere properly
+alias budget='ledger -f ~/finances/secret/ledger.dat -f ~/finances/secret/budgets.dat -p $(date +%b) budget'
 
 function pid {
   directory=$(basename $(pwd))
