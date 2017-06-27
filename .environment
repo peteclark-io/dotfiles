@@ -2,3 +2,10 @@
 
 export GOPATH=~/Code/go
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:~/Code/go/bin
+
+export VAULT_ADDR="http://127.0.0.1:8200"
+
+export NEO4J_TEST_URL="http://localhost:7474/db/data"
+export MONGO_TEST_URL="localhost:2717"
+export ETCD_TEST_URL="http://localhost:2379"
+export ELASTICSEARCH_TEST_URL="http://localhost:9200"

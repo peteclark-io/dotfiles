@@ -5,10 +5,11 @@ alias l='ls -lta'
 alias c='cd ~/Code'
 alias ports='lsof -i'
 alias fin='ledger -f ~/finances/secret/ledger.dat'
-alias finm='ledger -f ~/finances/secret/ledger.dat'
+alias finm='ledger -f ~/finances/secret/ledger.dat --market'
 alias finb='ledger -f ~/finances/secret/ledger.dat -f ~/finances/secret/budgets.dat'
 alias payday='~/dotfiles/payday' # todo: install payday somewhere properly
 alias budget='ledger -f ~/finances/secret/ledger.dat -f ~/finances/secret/budgets.dat -p $(date +%b) budget'
+alias sha256='openssl dgst -sha256'
 
 function pid {
   directory=$(basename $(pwd))
@@ -19,6 +20,15 @@ function kpid {
   kill $(pid)
 }
 
+function lower {
+  cat - | tr 'A-Z' 'a-z'
+}
+
+function upper {
+  cat - | tr 'a-z' 'A-Z'
+}
+
 ## Code
 alias gosrc='cd ${GOPATH}/src/github.com/peteclark-io'
 alias serve='ruby -run -ehttpd . -p9000'
+alias goft='cd ${GOPATH}/src/github.com/Financial-Times'

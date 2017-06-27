@@ -9,3 +9,4 @@
 . ~/dotfiles/.prompt
 . ~/dotfiles/.encryption
 . ~/dotfiles/.secrets
+. ~/dotfiles/.work
