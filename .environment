@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export GOPATH=~/Code/go
+export GOPATH=~/code/go
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:~/Code/go/bin
 
 export VAULT_ADDR="http://127.0.0.1:8200"
