@@ -18,5 +18,23 @@ export pub_prod_uk="pub-prod-uk-tunnel-up.ft.com"
 export pub_prod_eu="pub-prod-eu-tunnel-up.ft.com"
 export pub_prod_us="pub-prod-us-tunnel-up.ft.com"
 
-alias pac-pre-prod-eu="export KUBECONFIG=~/.kube/pac-pre-prod-eu.config"
-alias pac-pre-prod-us="export KUBECONFIG=~/.kube/pac-pre-prod-us.config"
+function get_kube_env {
+   if [ -z $KUBECONFIG ]; then
+      echo ""
+   else
+      local conf=${KUBECONFIG##*/}
+      echo "k8s/${conf%-kubeconfig}"
+   fi
+}
+
+alias pac-prod-eu="export KUBECONFIG=~/.kube/pac-prod-eu-kubeconfig"
+alias pac-prod-us="export KUBECONFIG=~/.kube/pac-prod-us-kubeconfig"
+
+alias pac-pre-prod-eu="export KUBECONFIG=~/.kube/pac-pre-prod-eu-kubeconfig"
+alias pac-pre-prod-us="export KUBECONFIG=~/.kube/pac-pre-prod-us-kubeconfig"
+
+function work_git_user {
+   git config user.name "peteclark-ft"
+   git config user.email "peter.clark@ft.com"
+   echo "Configured for work github account"
+}
