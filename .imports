@@ -10,5 +10,6 @@
 . ~/dotfiles/.encryption
 . ~/dotfiles/.secrets
 . ~/dotfiles/.work
+. ~/dotfiles/.ssh-setup
 
 alias reload=". ~/.bash_profile"

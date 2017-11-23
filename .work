@@ -38,3 +38,19 @@ function work_git_user {
    git config user.email "peter.clark@ft.com"
    echo "Configured for work github account"
 }
+
+function neo4j_browser {
+  colours
+  if [ -z $1 ]; then
+    echo "${amber_status} Usage - neo4j_browser [up-tunnel-url] [test]"
+    cleanup_colours && return 1
+  fi
+
+  local neo_name="upp-test"
+  if [ -z $2 ]; then
+     local neo_name="upp-${1%-tunnel-up.ft.com}"
+  fi
+
+  ssh -A -L 7474:${neo_name}-data-write-alb-up.ft.com:7474 -L 7687:${neo_name}-data-write-alb-up.ft.com:7687 core@${1}
+  cleanup_colours && return 2
+}
