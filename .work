@@ -27,6 +27,8 @@ function get_kube_env {
    fi
 }
 
+source <(kubectl completion bash)
+
 alias pac-prod-eu="export KUBECONFIG=~/.kube/pac-prod-eu-kubeconfig"
 alias pac-prod-us="export KUBECONFIG=~/.kube/pac-prod-us-kubeconfig"
 
@@ -54,3 +56,5 @@ function neo4j_browser {
   ssh -A -L 7474:${neo_name}-data-write-alb-up.ft.com:7474 -L 7687:${neo_name}-data-write-alb-up.ft.com:7687 core@${1}
   cleanup_colours && return 2
 }
+
+alias ft_login="export KUBECONFIG=/Users/petey/code/go/src/github.com/Financial-Times/content-k8s-auth-setup/kubeconfig"
