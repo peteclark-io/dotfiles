@@ -9,7 +9,7 @@
 . ~/dotfiles/.prompt
 . ~/dotfiles/.encryption
 . ~/dotfiles/.secrets
-. ~/dotfiles/.work
 . ~/dotfiles/.ssh-setup
+. ~/dotfiles/.gcloud
 
 alias reload=". ~/.bash_profile"

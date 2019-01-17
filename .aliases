@@ -34,3 +34,7 @@ function upper {
 alias gosrc='cd ${GOPATH}/src/github.com/peteclark-io'
 alias serve='ruby -run -ehttpd . -p9000'
 alias goft='cd ${GOPATH}/src/github.com/Financial-Times'
+
+if [ -f /usr/local/share/bash-completion/bash_completion ]; then
+  . /usr/local/share/bash-completion/bash_completion
+fi
