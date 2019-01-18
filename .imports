@@ -11,5 +11,6 @@
 . ~/dotfiles/.secrets
 . ~/dotfiles/.ssh-setup
 . ~/dotfiles/.gcloud
+. ~/dotfiles/.k8s
 
 alias reload=". ~/.bash_profile"
